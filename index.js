@@ -13,6 +13,12 @@ require('./shapes/canvas-polyfill-fixed.js');
 client = new Client();
 
 client.on('message', message=>{
+    if (message.content == 'shapebot help') {
+        message.channel.send("I'm a help!! uWu")
+    }
+}
+
+client.on('message', message=>{
 
     if (message.content == 'destroy shapebot') {
         client.destroy();
